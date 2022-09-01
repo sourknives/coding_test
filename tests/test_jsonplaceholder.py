@@ -51,6 +51,7 @@ def test_get(test_resource, test_resource_number, expected_len):
     ("posts", 5, {}, 5),
     ("users", 3, {}, 3),
     ("posts", None, {}, None),
+    # Confirming that a PUT request to comments is not successful
     ("posts/8/comments", None, {}, None)
 ])
 def test_put(test_resource, test_resource_number, test_data, expected):
