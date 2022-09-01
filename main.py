@@ -70,7 +70,7 @@ def main():
     # Iterate through comment list to swap name and email values and PUT updated comments
     for comment in post_eight_comments:
         comment['name'], comment['email'] = comment['email'], comment['name']
-        # **This may be an error** PUT request on returns 200 at post/# level
+        # **This may be an error** PUT request only returns 200 at post/# level
         put_req = jp.put(resource="posts/8/comments", data=str(comment))
         # This may be a product of the PUT request only working at post level. All ids return as 8
         print(f"PUT request for comment {comment.get('id')}: {put_req.get('id')}")
